@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CreateSupplierActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="43dp"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="94dp"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="252dp"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <TextView
+        android:id="@+id/screenNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        android:text="ADD SUPPLIER"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+    <EditText
+        android:id="@+id/idSupplierEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="2dp"
+        android:ems="10"
+        android:hint="Type Your Supplier Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/screenNameTextView" />
+
+    <EditText
+        android:id="@+id/categorySupplierEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="2dp"
+        android:ems="10"
+        android:hint="Type Category (eg: Organic)"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/idSupplierEditText" />
+
+    <EditText
+        android:id="@+id/mobileSupplierEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="2dp"
+        android:ems="10"
+        android:hint="Supplier's Mobile"
+        android:inputType="phone"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/categorySupplierEditText" />
+
+    <EditText
+        android:id="@+id/emailAddresOfSupplierEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="2dp"
+        android:ems="10"
+        android:hint="Supplier's Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/mobileSupplierEditText" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="18dp"
+        android:text="CANCEL"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/emailAddresOfSupplierEditText" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="ADD"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toEndOf="@+id/cancelButton"
+        app:layout_constraintTop_toTopOf="@+id/cancelButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
