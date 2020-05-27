@@ -16,7 +16,7 @@ public class DataService {
     }
 
     public void disconnect(){
-
+        //disconect
     }
 
     public void init(Context context){ sqlite = sqlite.getInstance(context);}

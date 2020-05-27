@@ -5,13 +5,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
 import androidx.annotation.Nullable;
-
 import com.example.a6930_application_mobile_android.entities.Supplier;
-
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class SupplierDatabaseHelper extends SQLiteOpenHelper {
 
@@ -28,6 +26,9 @@ public class SupplierDatabaseHelper extends SQLiteOpenHelper {
     private static final String COL_MOBILE = "MOBILE";
     private static final String COL_EMAIL = "EMAIL";
     private static final String COL_IMAGE = "IMAGE";
+
+    private static final String DROP_TABLE_ST = "DROP TABLE IF EXISTS " + TABLE_NAME;
+    private static final String GET_ALL_ST = "SELECT * FROM " + TABLE_NAME;
 
     private static SupplierDatabaseHelper mInstance = null;
 
@@ -48,8 +49,6 @@ public class SupplierDatabaseHelper extends SQLiteOpenHelper {
             COL_IMAGE + " TEXT " +
             ")";
 
-    private static final String GET_ALL_ST = "SELECT * FROM " + TABLE_NAME;
-
     private SupplierDatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -63,7 +62,8 @@ public class SupplierDatabaseHelper extends SQLiteOpenHelper {
     //that is used to upgrade the version of the database
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL(DROP_TABLE_ST);
+        onCreate(db);
     }
 
     public Long insert(String name, String category, String mobile, String email){
